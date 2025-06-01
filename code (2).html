@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Permintaan Maaf untuk Naomi Nafisah Nataneila</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400&display=swap');
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f9e6eb, #fbe9ec);
+    font-family: 'Poppins', sans-serif;
+    color: #4a3e48;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .container {
+    max-width: 480px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 28px;
+    padding: 3.25rem 3rem 3.5rem 3rem;
+    box-shadow: 0 12px 38px rgb(138 103 117 / 0.18);
+    text-align: center;
+    user-select: none;
+    position: relative;
+  }
+  h1 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-bottom: 0.15rem;
+    color: #ad7d8b;
+    line-height: 1.1;
+  }
+  h2 {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #a67c89;
+  }
+  .message {
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 2.2rem;
+    color: #6d5a60;
+    opacity: 1;
+    white-space: pre-line;
+    min-height: 86px;
+    transition: color 0.3s ease;
+  }
+  button {
+    background-color: #ad7d8b;
+    border: none;
+    border-radius: 38px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 14px 42px;
+    cursor: pointer;
+    box-shadow: 0 5px 16px rgb(173 125 139 / 0.55);
+    transition: background-color 0.28s ease, box-shadow 0.3s ease, transform 0.25s ease;
+    user-select: none;
+  }
+  button:hover,
+  button:focus {
+    background-color: #9d6d7b;
+    outline: none;
+    box-shadow: 0 7px 22px rgb(157 109 123 / 0.8);
+    transform: translateY(-3px);
+  }
+  #extraMsg {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #806469;
+    line-height: 1.5;
+    transition: max-height 0.65s ease, opacity 0.65s ease;
+  }
+  #extraMsg.visible {
+    max-height: 220px;
+    opacity: 1;
+    margin-top: 1.8rem;
+  }
+  /* Input styles */
+  #responseForm {
+    margin-top: 2rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  #responseForm.visible {
+    display: flex;
+  }
+  #responseForm textarea {
+    width: 100%;
+    min-height: 80px;
+    border-radius: 12px;
+    border: 1px solid #c9b8c4;
+    padding: 10px 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    resize: vertical;
+    color: #4a3e48;
+  }
+  #responseForm button {
+    margin-top: 12px;
+    background-color: #7f5a6c;
+    padding: 10px 24px;
+    font-weight: 600;
+    border: none;
+    border-radius: 36px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 150px;
+  }
+  #responseForm button:hover,
+  #responseForm button:focus {
+    background-color: #603648;
+    outline: none;
+  }
+  #thankYouMessage {
+    margin-top: 1.6rem;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #7a5a6b;
+    display: none;
+  }
+</style>
+</head>
+<body>
+  <main class="container" role="main" aria-label="Permintaan maaf interaktif untuk Naomi Nafisah Nataneila">
+    <h1>Maaf, Naomi Nafisah Nataneila</h1>
+    <h2>Aku ingin jujur dan tulus mengatakan...</h2>
+    <div class="message" aria-live="polite" aria-atomic="true" id="mainMessage">
+      Aku sadar kadang aku salah dan membuatmu kecewa.  
+      Itu bukan hal yang aku mau. Aku ingin kita tetap saling percaya dan kuat bersama.  
+      Terima kasih sudah sabar dan tetap menerima aku apa adanya.  
+    </div>
+    <button id="revealBtn" aria-expanded="false" aria-controls="extraMsg" aria-label="Tampilkan pesan pribadi permintaan maaf">
+      Selengkapnya
+    </button>
+    <div id="extraMsg" tabindex="0" aria-live="polite" aria-hidden="true">
+      Aku akan berusaha lebih baik lagi, belajar dari kesalahan,  
+      dan selalu ada untukmu, Naomi.  
+      Semoga kita bisa melangkah bersama dengan hati yang sejuk dan penuh cinta.  
+      Terima kasih sudah menjadi bagian penting dalam hidupku.
+    </div>
+
+    <button id="replyBtn" style="margin-top: 25px;">Balas Pesanku</button>
+
+    <form id="responseForm" aria-label="Form balasan permintaan maaf">
+      <textarea id="responseText" placeholder="Tulis balasan atau pesan untukku..." aria-label="Tulis balasan atau pesan"></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+
+    <div id="thankYouMessage" role="alert">Terima kasih atas balasanmu, Naomi!</div>
+  </main>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const revealBtn = document.getElementById('revealBtn');
+      const extraMsg = document.getElementById('extraMsg');
+      const replyBtn = document.getElementById('replyBtn');
+      const responseForm = document.getElementById('responseForm');
+      const thankYouMessage = document.getElementById('thankYouMessage');
+      const responseText = document.getElementById('responseText');
+      const mainMessage = document.getElementById('mainMessage');
+
+      revealBtn.addEventListener('click', () => {
+        const isExpanded = revealBtn.getAttribute('aria-expanded') === 'true';
+        if (isExpanded) {
+          extraMsg.classList.remove('visible');
+          extraMsg.setAttribute('aria-hidden', 'true');
+          revealBtn.setAttribute('aria-expanded', 'false');
+          revealBtn.textContent = 'Selengkapnya';
+          extraMsg.blur();
+        } else {
+          extraMsg.classList.add('visible');
+          extraMsg.setAttribute('aria-hidden', 'false');
+          revealBtn.setAttribute('aria-expanded', 'true');
+          revealBtn.textContent = 'Sembunyikan';
+          extraMsg.focus();
+        }
+      });
+
+      replyBtn.addEventListener('click', () => {
+        if (responseForm.classList.contains('visible')) {
+          responseForm.classList.remove('visible');
+          thankYouMessage.style.display = 'none';
+          replyBtn.textContent = 'Balas Pesanku';
+          responseText.value = '';
+          responseText.blur();
+        } else {
+          responseForm.classList.add('visible');
+          replyBtn.textContent = 'Tutup Form Balasan';
+          responseText.focus();
+          thankYouMessage.style.display = 'none';
+        }
+      });
+
+      responseForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const response = responseText.value.trim();
+        if (response.length === 0) {
+          alert('Tolong isi balasanmu sebelum mengirim.');
+          responseText.focus();
+          return;
+        }
+        // Display thank you message
+        thankYouMessage.style.display = 'block';
+        responseForm.classList.remove('visible');
+        replyBtn.textContent = 'Balas Pesanku';
+        responseText.value = '';
+        // Optionally visually update main message to show response received
+        mainMessage.style.color = '#8a5a69';
+        // Focus return to reply button for accessibility
+        replyBtn.focus();
+      });
+    });
+  </script>
+</body>
+</html>
+
